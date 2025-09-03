@@ -13,11 +13,8 @@ set -ex
 
 BOX_IP="$1"
 
-echo "正在连接到 $BOX_IP..."
 adb connect $BOX_IP
 adb root
-
-echo "连接成功！"
 
 for apk_file in apk/*.apk; do
   if [ -f "$apk_file" ]; then
